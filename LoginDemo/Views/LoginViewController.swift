@@ -93,11 +93,13 @@ class LoginViewController: UIViewController {
         view.addConstraints(format: "H:|-20-[v0(100)]-10-[v1]-20-|", views: accountLabel, accountTextField)
         view.addConstraints(format: "H:|-20-[v0(100)]-10-[v1]-20-|", views: passwordLabel, passwordTextField)
         
-        view.addConstraints(format: "V:|-180-[v0(30)]-10-[v1(30)]-40-[v2(30)]", views: accountLabel, passwordLabel, registerButton)
+        view.addConstraints(format: "V:|-180-[v0(30)]-10-[v1(30)]-100-[v2(30)]", views: accountLabel, passwordLabel, registerButton)
         view.addConstraints(format: "V:|-180-[v0(30)]-10-[v1(30)]-40-[v2(30)]", views: accountTextField, passwordTextField, loginButton)
         
-        view.addConstraints(format: "H:|-40-[v0(100)]", views: registerButton)
-        view.addConstraints(format: "H:[v0(100)]-40-|", views: loginButton)
+        view.addConstraints(format: "H:[v0(100)]", views: registerButton)
+        view.addConstraints(format: "H:[v0(100)]", views: loginButton)
+        registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
     private func hideViews() {
@@ -113,11 +115,11 @@ class LoginViewController: UIViewController {
         accountLabel.animate(.fadeIn())
         accountTextField.animate(.fadeIn())
         
-        passwordLabel.animate(.fadeIn(delay: 0.5))
-        passwordTextField.animate(.fadeIn(delay: 0.5))
+        passwordLabel.animate(.fadeIn(delay: 0.6))
+        passwordTextField.animate(.fadeIn(delay: 0.6))
         
-        registerButton.animate(.fadeIn(delay: 1))
-        loginButton.animate(.fadeIn(delay: 1))
+        loginButton.animate(.fadeIn(delay: 0.9))
+        registerButton.animate(.fadeIn(delay: 0.9))
     }
     
     @objc func registerTapped() {
