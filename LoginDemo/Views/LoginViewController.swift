@@ -17,7 +17,8 @@ class LoginViewController: UIViewController {
         
         navigationItem.title = "Login"
         view.backgroundColor = .white
-
+        view.accessibilityIdentifier = "LoginView"
+        
         setupViews()
         
         hideKeyboardWhenTappedAround()
