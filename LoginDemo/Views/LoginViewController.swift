@@ -30,6 +30,14 @@ class LoginViewController: UIViewController {
         
         accountTextField.text = nil
         passwordTextField.text = nil
+        
+        hideViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        showAnimations()
     }
     
     let accountLabel: UILabel = {
@@ -74,12 +82,10 @@ class LoginViewController: UIViewController {
     }()
     
     private func setupViews() {
-        view.addSubview(accountLabel)
-        view.addSubview(passwordLabel)
-        view.addSubview(accountTextField)
-        view.addSubview(passwordTextField)
-        view.addSubview(registerButton)
-        view.addSubview(loginButton)
+        let views = [accountLabel, accountTextField,
+                     passwordLabel, passwordTextField,
+                     registerButton, loginButton]
+        views.forEach(view.addSubview)
         
         registerButton.addTarget(self, action: #selector(registerTapped), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
@@ -92,6 +98,26 @@ class LoginViewController: UIViewController {
         
         view.addConstraints(format: "H:|-40-[v0(100)]", views: registerButton)
         view.addConstraints(format: "H:[v0(100)]-40-|", views: loginButton)
+    }
+    
+    private func hideViews() {
+        accountLabel.alpha = 0
+        accountTextField.alpha = 0
+        passwordLabel.alpha = 0
+        passwordTextField.alpha = 0
+        registerButton.alpha = 0
+        loginButton.alpha = 0
+    }
+    
+    private func showAnimations() {
+        accountLabel.animate(.fadeIn())
+        accountTextField.animate(.fadeIn())
+        
+        passwordLabel.animate(.fadeIn(delay: 0.5))
+        passwordTextField.animate(.fadeIn(delay: 0.5))
+        
+        registerButton.animate(.fadeIn(delay: 1))
+        loginButton.animate(.fadeIn(delay: 1))
     }
     
     @objc func registerTapped() {

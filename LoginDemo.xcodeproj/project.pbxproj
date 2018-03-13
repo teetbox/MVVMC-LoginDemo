@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C926CC6420577A5D0035E7EB /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C926CC6320577A5D0035E7EB /* UIView+Animation.swift */; };
 		C94B85851F8EDA6700DF2B34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C94B85841F8EDA6700DF2B34 /* AppDelegate.swift */; };
 		C94B858C1F8EDA6700DF2B34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C94B858B1F8EDA6700DF2B34 /* Assets.xcassets */; };
 		C94B858F1F8EDA6700DF2B34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C94B858D1F8EDA6700DF2B34 /* LaunchScreen.storyboard */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C926CC6320577A5D0035E7EB /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 		C94B85811F8EDA6700DF2B34 /* LoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C94B85841F8EDA6700DF2B34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C94B858B1F8EDA6700DF2B34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		C94B85BA1F8EE86200DF2B34 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C926CC6320577A5D0035E7EB /* UIView+Animation.swift */,
 				C94B85BB1F8EE8D800DF2B34 /* UIView+Constraint.swift */,
 				C9B820351F8EF59B00AFA69A /* UIViewController+Keyboard.swift */,
 				C9A4DE5F1F8F0A50006C6AE6 /* UIApplication+TopViewController.swift */,
@@ -313,6 +316,7 @@
 				C94B85B71F8EE30500DF2B34 /* LoginViewModel.swift in Sources */,
 				C9B820361F8EF59B00AFA69A /* UIViewController+Keyboard.swift in Sources */,
 				C999310E1F8F5330002BA6C9 /* UserViewModel.swift in Sources */,
+				C926CC6420577A5D0035E7EB /* UIView+Animation.swift in Sources */,
 				C999310C1F8F4E70002BA6C9 /* UserCoordinator.swift in Sources */,
 				C9A4DE5C1F8F04FD006C6AE6 /* RegisterViewModel.swift in Sources */,
 				C94B85B01F8EE08F00DF2B34 /* Coordinator.swift in Sources */,
