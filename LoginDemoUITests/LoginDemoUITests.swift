@@ -19,14 +19,16 @@ class LoginDemoUITests: XCTestCase {
         continueAfterFailure = false
         
         app = XCUIApplication()
-        app.launch()
     }
     
     func testLoginViewDisplayed() {
+        app.launch()
+        
         XCTAssert(app.isLoginDisplying)
     }
     
     func testRegisterViewDisplayed() {
+        app.launch()
         app.buttons["Register"].tap()
         
         XCTAssert(app.isRegisterDisplaying)

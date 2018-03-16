@@ -31,14 +31,6 @@ class LoginViewController: UIViewController {
         
         accountTextField.text = nil
         passwordTextField.text = nil
-        
-        hideViews()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        showAnimations()
     }
     
     let accountLabel: UILabel = {
@@ -101,26 +93,6 @@ class LoginViewController: UIViewController {
         view.addConstraints(format: "H:[v0(100)]", views: loginButton)
         registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-    }
-    
-    private func hideViews() {
-        accountLabel.alpha = 0
-        accountTextField.alpha = 0
-        passwordLabel.alpha = 0
-        passwordTextField.alpha = 0
-        registerButton.alpha = 0
-        loginButton.alpha = 0
-    }
-    
-    private func showAnimations() {
-        accountLabel.animate(.fadeIn())
-        accountTextField.animate(.fadeIn())
-        
-        passwordLabel.animate(.fadeIn(delay: 0.6))
-        passwordTextField.animate(.fadeIn(delay: 0.6))
-        
-        loginButton.animate(.fadeIn(delay: 0.9))
-        registerButton.animate(.fadeIn(delay: 0.9))
     }
     
     @objc func registerTapped() {
